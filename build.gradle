@@ -1,19 +1,25 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
 
 repositories {
+    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 
+dependencies {
+    implementation("com.github.gcajal:ClassRoom-Notifier:main-SNAPSHOT")
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+}
 test {
     useJUnitPlatform()
 }

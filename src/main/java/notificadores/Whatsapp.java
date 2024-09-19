@@ -1,11 +1,15 @@
 package notificadores;
 
-import notificador.Notificador;
+import classroom.notifier.entity.MedioNotificacion;
 
-public class Whatsapp implements Notificador {
+import java.util.Map;
+
+public class Whatsapp implements MedioNotificacion {
+
     @Override
-    public String notificar() {
-        String msj = "Notificación generada por Whatsapp";
-        return msj;
+    public void Notificar(Map<String, String> cambiosANotificar) {
+        String msj = cambiosANotificar.toString();
+        System.out.println(msj);
+        //return msj;
     }
 }

@@ -1,22 +1,20 @@
-import notificador.Notificador;
-import notificadores.Telegram;
+
+import classroom.notifier.entity.MedioNotificacion;
 import notificadores.Whatsapp;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NotificadorTest {
-    public Notificador notificador;
+    public MedioNotificacion notificador;
     @Test
     public void WhatsappTest(){
         notificador = new Whatsapp();
-        String msj_esperado = "Notificación generada por Whatsapp";
-        Assertions.assertEquals(msj_esperado,notificador.notificar());
+        Map<String, String> map = new HashMap<>();
+        map.put("ALD334", "1");
+        notificador.Notificar(map);
     }
 
-    @Test
-    public void TelegramTest(){
-        notificador =  new Telegram();
-        String msj_esperado = "Notificación generada por Telegram";
-        Assertions.assertEquals(msj_esperado,notificador.notificar());
-    }
+
 }
