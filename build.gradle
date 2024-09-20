@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-    implementation("com.github.gcajal:ClassRoom-Notifier:main-SNAPSHOT")
+    implementation("com.github.gcajal:ClassRoom-Notifier:a8dfdda1bd")
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
 }

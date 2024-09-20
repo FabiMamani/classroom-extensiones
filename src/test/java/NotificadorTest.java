@@ -1,5 +1,5 @@
 
-import classroom.notifier.entity.MedioNotificacion;
+import classroom.notifier.entity.implement.MedioNotificacion;
 import notificadores.Whatsapp;
 import org.junit.jupiter.api.Test;
 
