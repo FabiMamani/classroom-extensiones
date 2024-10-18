@@ -29,7 +29,7 @@ public class Telegram implements MedioComunicacion {
         // Leer la respuesta
         int responseCode = conn.getResponseCode();
         if (responseCode == 200) {
-            System.out.println("Mensaje enviado exitosamente.");
+            System.out.println("Mensaje enviado con éxito!");
         } else {
             System.out.println("Error al enviar el mensaje: " + responseCode);
         }
