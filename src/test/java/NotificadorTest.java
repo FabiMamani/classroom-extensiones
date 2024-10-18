@@ -11,7 +11,6 @@ public class NotificadorTest {
     public void WhatsappTest(){
         notificador = new Whatsapp();
         Assertions.assertEquals(notificador.getMedio(), "Whatsapp");
-
     }
 
 
